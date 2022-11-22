@@ -1,0 +1,18 @@
+
+
+:host {
+    ::ng-deep .charts
+    {    
+        display: block;
+        box-sizing: border-box;
+    }
+} 
+
+.card {
+    padding: 5px;
+}
+
+
+.cards {
+    padding: 10px 50px;
+}

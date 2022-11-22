@@ -1,0 +1,38 @@
+<div class="row" style="padding: 10px 0px;">
+    <div class="col-md-4 my-2">
+        <mat-card class="card">
+            <mat-chip-list>
+                <mat-chip>Day</mat-chip>
+            </mat-chip-list>
+            <p-chart type="doughnut" [data]="data" [options]="chartOptions" height="220px" ></p-chart>
+        </mat-card>
+    </div>
+    <div class="col-md-4 my-2">
+        <mat-card class="card">
+            <mat-chip-list>
+                <mat-chip>Month</mat-chip>
+            </mat-chip-list>
+            <p-chart type="doughnut" [data]="dataForMonth" height="220px" [options]="chartOptions"></p-chart>
+        </mat-card>
+    </div>
+    <div class="col-md-4 my-2">
+        <mat-card class="card">
+            <mat-chip-list>
+                <mat-chip>Year</mat-chip>
+            </mat-chip-list>
+            <p-chart type="doughnut" [data]="dataForYear" height="220px" [options]="chartOptions"></p-chart>
+        </mat-card>
+    </div>
+    <div class="col-md-12 my-2">
+        <mat-card class="card">
+            <div class="cards" style="border: none;">
+               
+                <mat-chip-list>
+                    <mat-chip>Car Parking Data for one year</mat-chip>
+                </mat-chip-list>
+                <p-chart type="bar" [data]="stackedData" [options]="stackedOptions" width="100%" height="250px"></p-chart>
+            </div>
+    </mat-card>
+
+    </div>
+</div>

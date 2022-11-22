@@ -1,0 +1,30 @@
+<!-- <mat-list>
+    <ng-container *ngFor="let item of menu">
+      <ng-container *ngIf="item.subMenu === undefined">
+        <mat-list-item
+          *ngIf="item.title"
+          [routerLink]="item.link"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }" (click)="onSelection($event)">
+          <mat-icon [style.color]="item.color" mat-list-icon>
+            {{ item.icon }}
+          </mat-icon>
+          <div mat-line>{{ item.title }}</div>
+        </mat-list-item>
+      </ng-container>
+    </ng-container>
+</mat-list> -->
+
+<mat-nav-list>
+  <mat-list-item *ngFor="let link of menu">
+     <!-- <button mat-raised-button (click)="showInfo(link)" 
+          matListItemMeta style="width:100%" routerLinkActive="horizontal-active-link" [routerLinkActiveOptions]="{exact:true}">
+        <!-- <mat-icon>info</mat-icon>s -  ->
+        {{ link.title }}
+     </button> -->
+     <a mat-button fxLayoutAlign="start center" 
+                (click)="showInfo(link)">
+                <span>{{ link.title }}</span>
+      </a>
+  </mat-list-item>
+</mat-nav-list>

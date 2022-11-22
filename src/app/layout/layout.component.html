@@ -1,0 +1,20 @@
+<div style="height: 100%;width: 100%;overflow: hidden;">
+    <app-header (menuToggled)="toggle()"></app-header>
+    <div class="row" style="height: 100%;width: 100%">
+        <div class="col-md-2">
+            <mat-drawer-container>
+                <mat-drawer mode="side" [opened]="opened">
+                    <app-menu-item [menu]="menu" (myServiceEvent)="getMenuInfo($event)"></app-menu-item>
+                </mat-drawer>
+
+                <mat-drawer-content [class.margin-left]="opened">
+                    <router-outlet></router-outlet>
+                </mat-drawer-content>
+            </mat-drawer-container>
+        </div>
+        <div class="col-md-10">
+            <app-charts *ngIf="currentMenu == 'Dashboard'"></app-charts>
+            <app-car-park-details *ngIf="currentMenu == 'Booking'"></app-car-park-details>
+        </div>
+    </div>
+</div>

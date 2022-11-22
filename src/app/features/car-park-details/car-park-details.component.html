@@ -1,0 +1,111 @@
+<div [formGroup]="formCar" novalidate class="out">
+    <div class="form">
+        <h2 class="text-center mb-4">Parking Details Form</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="feFirstName" class="col-md-5">Vehical Number
+                        <span class="mendatory text-danger" >*</span></label>
+                    <div class="col-md-7">
+                        <input maxlength="50" type="text" class="form-control" id="feFirstName" formControlName="carNumber" placeholder="">
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('carNumber')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="vahicalType" class="col-md-5">Vehical Type
+                        <span class="mendatory text-danger" >*</span>
+                    </label>
+                    <div class="col-md-7">
+                        <!-- <input maxlength="50" type="text" class="form-control" id="feFirstName" formControlName="vehicalType" placeholder=""> -->
+                        <select name="vahicalType" id="vahicalType" class="form-select" formControlName="vehicalType">
+                            <option value="null" selected> Select Vehical Type</option>
+                            <option value="Two Wheeler">Two Wheeler</option>
+                            <option value="Four Wheeler">Four Wheeler</option>
+                        </select>
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('vehicalType')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="feFirstName" class="col-md-5">No of Vehicals 
+                        <span class="mendatory text-danger">*</span></label>
+                    <div class="col-md-7">
+                        <input maxlength="50" type="text" class="form-control" id="feFirstName" formControlName="num_Vehicals" placeholder="">
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('num_Vehicals')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="feLastName" class="col-md-5">Owner Name
+                        <span class="mendatory text-danger">*</span></label>
+                    <div class="col-md-7">
+                        <input maxlength="50" type="text" class="form-control" id="feLastName" formControlName="carOwnerName" placeholder="">
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('carOwnerName')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="feLastName" class="col-md-5">Contact Number
+                        <span class="mendatory text-danger">*</span></label>
+                    <div class="col-md-7">
+                        <input maxlength="50" type="text" class="form-control" id="feLastName" formControlName="phone" placeholder="">
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('phone')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="feFirstName" class="col-md-5">Email Address
+                        <span class="mendatory text-danger">*</span></label>
+                    <div class="col-md-7">
+                        <input maxlength="50" type="text" class="form-control" id="feFirstName" formControlName="email" placeholder="">
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('email')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+          
+            
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <label for="feLastName" class="col-md-5">Address
+                        <span class="mendatory text-danger">*</span></label>
+                    <div class="col-md-7">
+                        <input maxlength="50" type="text" class="form-control" id="feLastName" formControlName="address" placeholder="">
+                        <mat-error class="my-2" *ngFor="let message of showValidationMessages('address')">
+                            {{ message }}
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 text-center" >
+                <button class="mx-2"  mat-raised-button color="primary" (click)="submitForm()">
+                    Save
+                </button>
+                <button class="mx-2" mat-raised-button color="primary">
+                    Reset
+                </button>
+            </div>
+            <!-- <div class="col-md-6 text-right">
+            </div> -->
+        </div>
+    </div>
+</div>
